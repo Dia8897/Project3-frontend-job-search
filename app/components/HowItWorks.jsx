@@ -1,10 +1,12 @@
+import { register } from "module";
+
 // components/HowItWorks.jsx
 export default function HowItWorks() {
     const steps = [
-        { title: "Register", icon: "📝", paragraph:"Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."},
-        { title: "Create a Resume", icon: "📄", paragraph:"Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae." },
-        { title: "Find Job", icon: "🔍", paragraph:"Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas." },
-        { title: "Apply Job", icon: "📤", paragraph:"Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas." },
+        { title: "Register", icon: "./icons/register.svg", paragraph:"Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."},
+        { title: "Create a Resume", icon: "./icons/create.svg", paragraph:"Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae." },
+        { title: "Find Job", icon: "./icons/find.svg", paragraph:"Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas." },
+        { title: "Apply Job", icon: "./icons/apply.svg", paragraph:"Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas." },
     ];
 
     return (
@@ -22,7 +24,9 @@ export default function HowItWorks() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 {steps.map((step, index) => (
                     <div key={index} className="bg-white p-6 rounded-lg shadow">
-                        <div className="text-4xl mb-3">{step.icon}</div>
+                        <div className="text-4xl mb-3">
+                            <img src= {step.icon}/>
+                            </div>
                         <h4 className="font-semibold text-black mb-2">{step.title}</h4>
                         <p className="text-[#8a8a8a] text-sm"> {step.paragraph}</p>
                     </div>
