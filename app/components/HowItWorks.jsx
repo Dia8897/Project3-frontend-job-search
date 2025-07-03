@@ -1,6 +1,6 @@
 import { register } from "module";
 
-// components/HowItWorks.jsx
+
 export default function HowItWorks() {
     const steps = [
         { title: "Register", icon: "./icons/register.svg", paragraph:"Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."},
