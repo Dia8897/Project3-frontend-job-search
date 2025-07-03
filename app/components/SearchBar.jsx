@@ -1,7 +1,7 @@
 export default function SearchBar() {
   return (
-    <div className="bg-white flex flex-col sm:flex-row gap-10">
-      <div className="flex justify-between items-center gap-2 rounded-md bg-[#f9f9f9] py-1 w-full ">
+    <div className="bg-white flex flex-col sm:flex-row gap-3 text-sm">
+      <div className="flex justify-between items-center gap-2 rounded-md bg-[#f9f9f9] px-2 py-1 w-full ">
         <img
           src="./icons/job-title.svg"
           alt="Search Icon"

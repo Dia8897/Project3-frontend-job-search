@@ -1,85 +1,153 @@
+"use client";
+import { useState } from "react";
 import SearchBar from "./SearchBar";
 
 export default function TopSection() {
-  return (
-    <section className="relative bg-[#f2f2f2] overflow-visible">
-      <div className="container mx-auto px-0">
-        <div className="grid w-full grid-cols-[0.75fr_auto]" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-          <div className="flex flex-col justify-between px-6 flex-1">
-            <header className="flex justify-between items-center relative z-20 pb-20 ml-10 pt-15">
-              <div className="flex items-center gap-[90px]">
-                <h1 className="text-2xl font-bold text-black">
+  return (
+    <div className = "bg-[#f2f2f2]" style={{ fontFamily: "Montserrat, sans-serif" }}>
+
+      <header className="fixed top-0 left-0 w-full ">
+        <div className="flex w-full h-full items-center justify-between  min-h-[80px]  mx-auto">
+
+          <div className="w-1/2 bg-[#f2f2f2] py-5">
+            <div className = " flex items-center px-6 w-full justify-end pr-30">
+
+              <div className="hidden md:flex items-center space-x-8 text-black">
+                <h1 className="text-2xl font-bold whitespace-nowrap">
                   Job<span className="text-[#00cc99]">NQW</span>
                 </h1>
-
-                <nav className="space-x-[50px] text-black font-medium hidden md:flex justify-between">
+                <nav className="flex space-x-6 font-medium">
                   <a href="#" className="hover:text-[#00cc99]">Home</a>
                   <a href="#" className="hover:text-[#00cc99]">Job</a>
                   <a href="#" className="hover:text-[#00cc99]">About Us</a>
                   <a href="#" className="hover:text-[#00cc99]">Contact</a>
                 </nav>
               </div>
-            </header>
+            </div>
 
-            <div className="max-w-xl ml-10">
-              <h2 className="text-4xl text-black font-extrabold mb-4">Search, Find, & Apply</h2>
-              <p className="mb-10 text-black">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.
-                Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-                Iaculis massa nisl malesuada lacinia integer nunc posuere.
-              </p>
-              <div className="bg-white py-3 px-6 mb-20 rounded-lg">
-                <SearchBar />
+
+            <div className="md:hidden text-black font-bold text-2xl">
+              Job<span className="text-[#00cc99]">NQW</span>
+            </div>
+          </div>
+
+
+          <div className="w-1/2 bg-[#00cc99]  py-5">
+            <div className="flex items-center justify-end w-full max-w-lg px-6">
+
+              <div className="hidden md:flex items-center space-x-4">
+                <button className="text-white">Sign In</button>
+                <button className="bg-white text-black rounded-md px-5 py-2 flex items-center gap-2">
+                  <img
+                    src="./icons/create-account.svg"
+                    alt="create account"
+                    className="w-5 h-5"
+                  />
+                  Create Account
+                </button>
+              </div>
+
+
+              <div className="md:hidden">
+                <button
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  aria-label="Toggle menu"
+                  className="flex flex-col justify-center items-center space-y-1.5"
+                >
+                  <span
+                    className={`block w-6 h-0.5 bg-black transition-transform ${menuOpen ? "rotate-45 translate-y-1.5" : ""
+                      }`}
+                  />
+                  <span
+                    className={`block w-6 h-0.5 bg-black transition-opacity ${menuOpen ? "opacity-0" : "opacity-100"
+                      }`}
+                  />
+                  <span
+                    className={`block w-6 h-0.5 bg-black transition-transform ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                      }`}
+                  />
+                </button>
               </div>
             </div>
           </div>
+        </div>
 
 
-          <div className="relative bg-[#00cc99] rounded-bl-[80px] px-8 pt-15 overflow-hidden">
-
-            <div className="flex justify-end space-x-10 mb-10 mr-[50px]">
-              <button className="text-white">Sign In</button>
-              <button className="px-5 py-2 bg-white rounded-md text-black flex items-center gap-2">
-                <img src="./icons/create-account.svg" className="w-5 h-5" />
-                <p className="text-black">Create Account</p>
+        {menuOpen && (
+          <div className="md:hidden bg-[#f2f2f2] flex flex-col px-6 py-4 space-y-4 shadow-lg relative z-40">
+            <nav className="flex flex-col space-y-3 font-medium">
+              <a href="#" onClick={() => setMenuOpen(false)} className="hover:text-[#00cc99]">Home</a>
+              <a href="#" onClick={() => setMenuOpen(false)} className="hover:text-[#00cc99]">Job</a>
+              <a href="#" onClick={() => setMenuOpen(false)} className="hover:text-[#00cc99]">About Us</a>
+              <a href="#" onClick={() => setMenuOpen(false)} className="hover:text-[#00cc99]">Contact</a>
+            </nav>
+            <div className="flex flex-col space-y-3">
+              <button onClick={() => setMenuOpen(false)} className="text-black text-left">Sign In</button>
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="bg-[#00cc99] text-white rounded-md px-5 py-2 flex items-center gap-2 justify-center"
+              >
+                <img
+                  src="./icons/create-account.svg"
+                  alt="create account"
+                  className="w-5 h-5"
+                />
+                Create Account
               </button>
             </div>
+          </div>
+        )}
+      </header>
 
-            <div
-              className="absolute bg-white p-2 rounded-md"
-              style={{
-                top: "20%", left: "15%", transform: "rotate(15deg)",
-                width: "48px", height: "48px", display: "flex", alignItems: "center", justifyContent: "center"
-              }}
-            >
-              <img src="/icons/img1.svg" alt="icon1" style={{ width: "24px", height: "24px" }} />
+
+      <section className="relative w-full flex flex-col md:flex-row pt-16">
+
+        <div className="w-full md:w-1/2 bg-[#f2f2f2] min-h-[500px]" />
+        <div className="w-full md:w-1/2 bg-[#00cc99] min-h-[500px] rounded-bl-[80px]" />
+
+
+        <div className="absolute inset-0 flex justify-center items-center px-6 py-20 w-full">
+          <div className="w-full max-w-5xl flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+
+            <div className="w-full md:w-1/2">
+              <h2 className="text-4xl font-extrabold mb-4 text-black">
+                Search, Find, & Apply
+              </h2>
+              <p className="mb-10 text-black">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+                faucibus ex sapien vitae pellentesque sem placerat. In id cursus
+                mi pretium tellus duis convallis.
+              </p>
+
+              <div className="bg-white py-3 px-2 rounded-lg">
+                <SearchBar />
+              </div>
             </div>
 
-            <div
-              className="absolute bg-white p-2 rounded-md"
-              style={{
-                top: "50%", left: "60%", transform: "rotate(-25deg)",
-                width: "58px", height: "58px", display: "flex", alignItems: "center", justifyContent: "center"
-              }}
-            >
-              <img src="/icons/img2.svg" alt="icon2" style={{ width: "30px", height: "30px" }} />
-            </div>
+       
+            <div className="w-full md:w-1/2 relative">
 
-            <div
-              className="absolute bg-white p-2 rounded-md"
-              style={{
-                top: "70%", left: "30%", transform: "rotate(35deg)",
-                width: "43px", height: "43px", display: "flex", alignItems: "center", justifyContent: "center"
-              }}
-            >
-              <img src="/icons/img3.svg" alt="icon3" style={{ width: "20px", height: "20px" }} />
+
+         
+              <div className="relative h-[300px] w-full">
+                <div className="absolute bg-white p-2 rounded-md flex items-center justify-center top-[20%] left-[15%] rotate-[15deg] w-[48px] h-[48px]">
+                  <img src="/icons/img1.svg" alt="icon1" className="w-6 h-6" />
+                </div>
+
+                <div className="absolute bg-white p-2 rounded-md flex items-center justify-center top-[50%] left-[60%] -rotate-[25deg] w-[58px] h-[58px]">
+                  <img src="/icons/img2.svg" alt="icon2" className="w-[30px] h-[30px]" />
+                </div>
+
+                <div className="absolute bg-white p-2 rounded-md flex items-center justify-center top-[70%] left-[30%] rotate-[35deg] w-[43px] h-[43px]">
+                  <img src="/icons/img3.svg" alt="icon3" className="w-5 h-5" />
+                </div>
+              </div>
             </div>
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

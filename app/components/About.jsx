@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <section className="flex px-15 py-10 justify-between items-center gap-10">
+        <section className="flex flex-col mx-auto md:flex-row px-15 py-10 justify-between items-center gap-10">
             <img src="./icons/about.png" alt="logo" className="w-1/2" />
             <div>
                 <h1 className="text-black font-bold text-4xl mb-5">
