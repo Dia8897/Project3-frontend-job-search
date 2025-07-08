@@ -48,7 +48,7 @@ export default function Categories() {
         <>
             <section className="bg-[rgba(0,204,153,0.051)] py-12">
                 <div className="container mx-auto relative">
-                    {/* Header */}
+
                     <div className="flex flex-col items-center justify-center py-10 gap-6 text-center">
                         <h1 className="text-black font-bold text-3xl">Popular Job Categories</h1>
                         <p className="text-[#8a8a8a] max-w-5xl">
@@ -56,7 +56,6 @@ export default function Categories() {
                         </p>
                     </div>
 
-                    {/* Swiper wrapper */}
                     <div className="relative" style={{ width: wrapperWidth }}>
                         <Swiper
                             spaceBetween={20}
@@ -88,7 +87,6 @@ export default function Categories() {
                         </Swiper>
                     </div>
 
-                    {/* Button below */}
                     <div className="flex items-center justify-center mt-10">
                         <button className="px-5 py-2 border border-[#00cc99] rounded-md shadow-md text-[#00cc99] font-semibold cursor-pointer hover:bg-[#00cc99] hover:text-white">
                             View More
