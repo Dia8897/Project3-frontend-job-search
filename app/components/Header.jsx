@@ -88,28 +88,28 @@ export default function Header() {
                 >
                     <a
                         href="#"
-                        className="block hover:text-[#00cc99]"
+                        className="text-black block hover:text-[#00cc99]"
                         onClick={() => setMenuOpen(false)}
                     >
                         Home
                     </a>
                     <a
                         href="#"
-                        className="block hover:text-[#00cc99]"
+                        className="text-black block hover:text-[#00cc99]"
                         onClick={() => setMenuOpen(false)}
                     >
                         Job
                     </a>
                     <a
                         href="#"
-                        className="block hover:text-[#00cc99]"
+                        className="text-black block hover:text-[#00cc99]"
                         onClick={() => setMenuOpen(false)}
                     >
                         About Us
                     </a>
                     <a
                         href="#"
-                        className="block hover:text-[#00cc99]"
+                        className="text-black block hover:text-[#00cc99]"
                         onClick={() => setMenuOpen(false)}
                     >
                         Contact
