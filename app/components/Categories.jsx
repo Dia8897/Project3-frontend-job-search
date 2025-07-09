@@ -43,10 +43,21 @@ export default function Categories() {
             subtitle: "350 Job vacancy",
         },
         {
-            icon: "/icons/Product-management.svg",
-            title: "Product Management",
+            icon: "/icons/Bank.svg",
+            title: "Financial Management",
             subtitle: "350 Job vacancy",
-        }
+        },
+
+        {
+            icon: "/icons/Product-management.svg",
+            title: "Consultant",
+            subtitle: "350 Job vacancy",
+        },
+        {
+            icon: "/icons/apply.svg",
+            title: "Business strategy",
+            subtitle: "350 Job vacancy",
+        },
     ];
 
     return (
@@ -82,7 +93,7 @@ export default function Categories() {
                         >
                             {cards.map((card, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="group w-full bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 px-8 min-h-[220px] transition-all duration-300 hover:bg-[#00cc99]">
+                                    <div className="group w-full bg-white rounded-[20px] flex flex-col gap-4 py-10 px-8 min-h-[250px] transition-all duration-300 hover:bg-[#00cc99]">
                                         <img
                                             src={card.icon}
                                             alt={`${card.title} Icon`}
@@ -91,7 +102,7 @@ export default function Categories() {
                                                 : "group-hover:brightness-0 group-hover:invert"
                                                 }`}
                                         />
-                                        <h1 className="text-black font-semibold group-hover:text-white">
+                                        <h1 className="text-black font-semibold group-hover:text-white max-w-34 text-lg">
                                             {card.title}
                                         </h1>
                                         <p className="text-[#8a8a8a] group-hover:text-white">
