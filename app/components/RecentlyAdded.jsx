@@ -33,7 +33,7 @@ export default function RecentlyAdded() {
             icon: "/icons/Google.svg",
             title: "Full Stack Development",
             subtitle: "Google",
-            desc: "Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
+            desc: "Iaculis massa nisl malesuada lacinia integer nunc posuere. Ad litora torquent per conubia nostra inceptos himenaeos.",
             location: "California, USA"
         },
         {
@@ -43,12 +43,26 @@ export default function RecentlyAdded() {
             desc: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. ",
             location: "California, USA"
         },
+        {
+            icon: "/icons/Meta.svg",
+            title: "Software Engineering",
+            subtitle: "Meta",
+            desc: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. ",
+            location: "California, USA"
+        },
+        {
+            icon: "/icons/Microsoft.svg",
+            title: "Quality Assurance",
+            subtitle: "Apple",
+            desc: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. ",
+            location: "Washington, USA"
+        },
     ];
 
     return (
         <>
 
-            <section className="container mx-auto relative">
+            <section className="container mx-auto relative py-16">
 
                 <div className="flex flex-col items-center justify-center py-10 gap-6 text-center">
                     <h1 className="text-black font-bold text-5xl">Recently Added Jobs</h1>
@@ -86,13 +100,13 @@ export default function RecentlyAdded() {
                                     <p className="text-[#8a8a8a] text-left w-full">{card.subtitle}</p>
                                     <p className="text-[#8a8a8a] text-left w-full">{card.desc}</p>
 
-                                    <div className="flex gap-3 w-full">
-                                        <button className="flex bg-[#f9f9f9] gap-2 rounded-md px-5 py-3 items-center">
+                                    <div className="flex gap-3 w-full ">
+                                        <button className="flex bg-[#f9f9f9] gap-2 rounded-md px-5 py-3 items-center text-xs">
                                             <img src="icons/Location.svg" />
                                             <p className="text-black">{card.location}</p>
                                         </button>
 
-                                        <button className="flex bg-[#f9f9f9] gap-2 rounded-md px-5 py-3 items-center">
+                                        <button className="flex bg-[#f9f9f9] gap-2 rounded-md px-5 py-3 items-center text-xs">
                                             <img src="icons/Full-time.png" />
                                             <p className="text-black">Full Time</p>
                                         </button>

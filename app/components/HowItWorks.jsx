@@ -1,6 +1,3 @@
-
-
-
 export default function HowItWorks() {
     const steps = [
         { title: "Register", icon: "./icons/register.svg", paragraph: "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis." },
@@ -10,7 +7,7 @@ export default function HowItWorks() {
     ];
 
     return (
-        <section className="py-20 px-6 max-w-7xl mx-auto">
+        <section className="py-20 container mx-auto px-3">
             <h3 className="text-3xl font-bold mb-4 text-black">How it works</h3>
             <div className="flex justify-between items-center">
                 <p className="text-gray-600 max-w-2xl mb-10">

@@ -42,15 +42,21 @@ export default function Categories() {
             title: "Product Management",
             subtitle: "350 Job vacancy",
         },
+        {
+            icon: "/icons/Product-management.svg",
+            title: "Product Management",
+            subtitle: "350 Job vacancy",
+        }
     ];
 
     return (
         <>
             <section className="bg-[rgba(0,204,153,0.051)] py-12">
                 <div className="container mx-auto relative">
-
                     <div className="flex flex-col items-center justify-center py-10 gap-6 text-center">
-                        <h1 className="text-black font-bold text-3xl">Popular Job Categories</h1>
+                        <h1 className="text-black font-bold text-3xl">
+                            Popular Job Categories
+                        </h1>
                         <p className="text-[#8a8a8a] max-w-5xl">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit...
                         </p>
@@ -59,28 +65,38 @@ export default function Categories() {
                     <div className="relative" style={{ width: wrapperWidth }}>
                         <Swiper
                             spaceBetween={20}
+                            simulateTouch={true}
                             pagination={false}
                             modules={[]}
                             className="w-full"
-                            slidesPerView={4}
+                            slidesPerView={4.5}
+                            centeredSlides={false}
                             breakpoints={{
-                                320: { slidesPerView: 1 },
+                                320: { slidesPerView: 1.2 },
                                 640: { slidesPerView: 1.5 },
-                                768: { slidesPerView: 2 },
-                                1024: { slidesPerView: 3 },
-                                1280: { slidesPerView: 4 },
+                                768: { slidesPerView: 2.5 },
+                                1024: { slidesPerView: 3.5 },
+                                1280: { slidesPerView: 4.5 },
+                                1440: { slidesPerView: 5 },
                             }}
                         >
                             {cards.map((card, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="group w-full bg-white rounded-[50px] flex flex-col items-center justify-center gap-4 py-10 px-8 min-h-[220px] transition-all duration-300 hover:bg-[#00cc99]">
+                                    <div className="group w-full bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 px-8 min-h-[220px] transition-all duration-300 hover:bg-[#00cc99]">
                                         <img
                                             src={card.icon}
                                             alt={`${card.title} Icon`}
-                                            className={`w-12 h-12 transition-all duration-300 ${index === 0 ? "icon-green" : "group-hover:brightness-0 group-hover:invert"}`}
+                                            className={`w-12 h-12 transition-all duration-300 ${index === 0
+                                                ? "icon-green"
+                                                : "group-hover:brightness-0 group-hover:invert"
+                                                }`}
                                         />
-                                        <h1 className="text-black font-semibold group-hover:text-white">{card.title}</h1>
-                                        <p className="text-[#8a8a8a] group-hover:text-white">{card.subtitle}</p>
+                                        <h1 className="text-black font-semibold group-hover:text-white">
+                                            {card.title}
+                                        </h1>
+                                        <p className="text-[#8a8a8a] group-hover:text-white">
+                                            {card.subtitle}
+                                        </p>
                                     </div>
                                 </SwiperSlide>
                             ))}
@@ -104,8 +120,7 @@ export default function Categories() {
 .group:hover .icon-green {
   filter: brightness(0) invert(1); /* white on hover */
 }
-        `
-            }</style>
+        `}</style>
         </>
     );
 }
