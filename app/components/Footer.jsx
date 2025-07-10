@@ -1,15 +1,16 @@
 import Register from "./Register"
 export default function Footer() {
     return (
-        <footer className="relative bg-white pt-20 mt-20">
+        <footer className="relative bg-[##ededed] pt-20 mt-20">
 
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-full max-w-7xl">  <Register /></div>
 
 
             <div className="bg-[#00cc99]">
-                <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-10 py-20 gap-5">
+                <div className="container mx-auto flex flex-col md:flex-row justify-between items-start px-10 py-20 gap-10">
+
                     <div>
-                        <p className="text-black text-4xl font-extrabold mb-2">
+                        <p className="text-black text-4xl font-extrabold mb-4">
                             Job<span className="text-white">NQW</span>
                         </p>
                         <p className="text-white text-sm max-w-md">
@@ -18,7 +19,7 @@ export default function Footer() {
                         </p>
                     </div>
                     <div className="text-white">
-                        <h1 className="font-bold text-xl">Compagny</h1>
+                        <h1 className="font-bold text-xl mb-4">Compagny</h1>
                         <div className="text-sm">
                             <p>Address: 123 Fifth Avenue, New York - 1060, USA</p>
                             <p>Call Us: +(1600) 456 7890</p>
@@ -27,7 +28,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="text-white">
-                        <h1 className="font-bold text-xl"> Pages</h1>
+                        <h1 className="font-bold text-xl mb-4"> Pages</h1>
                         <ul className="space-y-1 text-sm">
                             <li>Home</li>
                             <li>Booking</li>
@@ -38,7 +39,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className="text-white">
-                        <h1 className="font-bold text-xl"> Contact Us</h1>
+                        <h1 className="font-bold text-xl mb-4"> Contact Us</h1>
                         <div className="flex gap-3">
                             <img src="icons/Google-footer.svg" />
                             <img src="icons/Facebook-footer.svg" />

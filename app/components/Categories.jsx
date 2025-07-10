@@ -80,15 +80,13 @@ export default function Categories() {
                             pagination={false}
                             modules={[]}
                             className="w-full"
-                            slidesPerView={4.5}
+                            slidesPerView={4.3}
                             centeredSlides={false}
                             breakpoints={{
-                                320: { slidesPerView: 1.2 },
-                                640: { slidesPerView: 1.5 },
-                                768: { slidesPerView: 2.5 },
-                                1024: { slidesPerView: 3.5 },
-                                1280: { slidesPerView: 4.5 },
-                                1440: { slidesPerView: 5 },
+                                320: { slidesPerView: 1 },
+                                640: { slidesPerView: 1.3 },
+                                768: { slidesPerView: 4.3 },
+
                             }}
                         >
                             {cards.map((card, index) => (
@@ -129,7 +127,7 @@ export default function Categories() {
 }
 
 .group:hover .icon-green {
-  filter: brightness(0) invert(1); /* white on hover */
+  filter: brightness(0) invert(1); 
 }
         `}</style>
         </>
