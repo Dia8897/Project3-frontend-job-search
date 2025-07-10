@@ -3,10 +3,10 @@ export default function Footer() {
     return (
         <footer className="relative bg-[##ededed] pt-20 mt-20">
 
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-full max-w-7xl">  <Register /></div>
+            <div className="mt-20 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-full max-w-7xl">  <Register /></div>
 
 
-            <div className="bg-[#00cc99]">
+            <div className="bg-[#00cc99] pt-38 pb-16">
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-start px-10 py-20 gap-10">
 
                     <div>
