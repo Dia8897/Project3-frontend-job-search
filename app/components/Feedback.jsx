@@ -30,7 +30,7 @@ const testimonials = [
 
 export default function TestimonialSlider() {
     return (
-        <section className="container mx-auto py-12 px-4 text-left">
+        <section className="container mx-auto py-18 mb-6 px-4 text-left">
             <h2 className="text-3xl  font-semibold mb-8 text-black">
                 People’s Feedback about JobNow!
             </h2>
@@ -43,35 +43,31 @@ export default function TestimonialSlider() {
             >
                 {testimonials.map((t, index) => (
                     <SwiperSlide key={index}>
-                        <div className="flex flex-col md:flex-row items-center gap-12 px-4 ">
+                        <div className="flex flex-col items-stretch  md:flex-row  gap-12 px-4 ">
                             <div className="w-full md:w-1/2">
                                 <p className="text-[#8a8a8a] text-lg mb-6"> {t.desc}</p>
                                 <p className="text-black text-lg font-semibold mb-4">{t.prg}</p>
                                 <h4 className="text-xl font-semibold text-black">{t.name}</h4>
                                 <span className="text-sm text-[#767373]">{t.role}</span>
                                 <div className="flex gap-4 mt-6">
-                                    <button className="swiper-custom-prev w-10 h-10 rounded-full bg-[#00cc99] text-white font-extrabold text-3xl transform duration-300 transform-gpu"
-                                        onMouseEnter={(e) => e.currentTarget.style.transform = "translateZ(20px)"}
-                                        onMouseLeave={(e) => e.currentTarget.style.transform = "translateZ(0px)"}
-                                    >
-                                        &#8592;
-                                    </button>
-                                    <button className="swiper-custom-next w-10 h-10 rounded-full bg-[#00cc99] text-white text-3xl font-extrabold transform duration-300 transform-gpu"
-                                        onMouseEnter={(e) => e.currentTarget.style.transform = "translateZ(20px)"}
-                                        onMouseLeave={(e) => e.currentTarget.style.transform = "translateZ(0px)"}
-                                    >
-                                        &#8594;
+
+                                    <button className="swiper-custom-prev w-12 h-12 rounded-full bg-[#00cc99] shadow-md flex items-center justify-center hover:scale-105 transition-transform duration-300">
+                                        <img className="w-3/4" src="/icons/Left-arrow.png" />
                                     </button>
 
+
+                                    <button className="swiper-custom-next w-12 h-12 rounded-full bg-[#00cc99] shadow-md flex items-center justify-center hover:scale-105 transition-transform duration-300">
+                                        <img className="w-3/4" src="/icons/Right-arrow.png" />
+                                    </button>
                                 </div>
+
+
                             </div>
 
-                            <div className="w-48 h-48 rounded-lg bg-[#00cc99] text-black flex justify-center text-center>">
+                            <div className="w-1/2 h-full min-h-[300px] rounded-xl bg-[#00cc99] object-cover text-black flex justify-center text-center>">
                                 {t.img}
 
                             </div>
-
-
                         </div>
                     </SwiperSlide>
                 ))}
